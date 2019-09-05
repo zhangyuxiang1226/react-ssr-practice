@@ -6,3 +6,6 @@ npm init -y
 
 ## 安装依赖
 cnpm i express -S
+
+## 启动服务
+cmd： node ./src/server/index.js
