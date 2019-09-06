@@ -1,15 +1,22 @@
+import React, { Component } from 'react'; // 要引入react
 // 服务器端入口文件
 let express = require('express');
 let app = express();
+
+import Home from '../containers/Home'
+import { renderToString } from 'react-dom/server'
+
 app.get('/', function (req, res) {
+    let html = renderToString(<Home />);
     res.send(
-        `
-            <html>
+        `<html>
                 <head>
                     <title>REACT SSR TRAIN</title>
                 </head>
                 <body>
-                    <div id="root">hello</div>
+                    <div id="root">
+                    ${html}
+                    </div>
                 </body>
             </html>
         `
