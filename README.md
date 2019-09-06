@@ -26,10 +26,20 @@ cmd： node ./src/server/index.js
 cnpm i webpack-node-externals -D
 安装这个模块是为了：在node环境运行下，我们不对类似fs这些核心模块进行打包
 
+### 配置loader转译react
+
 ## 配置自动打包和更新
 package.json
     "start": "nodemon build/server.js",
     "build": "webpack --config webpack.config.js --watch"
+
+安装 npm-run-all -g
+→ 改为并行执行
+ "dev": "npm-run-all --parallel dev:**",
+    "dev:start": "nodemon build/server.js",
+    "dev:build": "webpack --config webpack.config.js --watch"
+
+→ npm run dev
 
 ### 其他步骤
 http://www.zhufengpeixun.cn/architecture/html/56.react-ssr.html
