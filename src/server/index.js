@@ -2,7 +2,7 @@ import React, { Component } from 'react'; // 要引入react
 // 服务器端入口文件
 let express = require('express');
 let app = express();
-
+app.use(express.static('public')); // 把public当做静态文件中间件目录
 import Home from '../containers/Home'
 import { renderToString } from 'react-dom/server'
 
