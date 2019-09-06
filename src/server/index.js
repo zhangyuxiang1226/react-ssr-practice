@@ -17,6 +17,7 @@ app.get('/', function (req, res) {
                     <div id="root">
                     ${html}
                     </div>
+                    <script src="/client.js"></script>
                 </body>
             </html>
         `

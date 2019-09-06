@@ -41,6 +41,11 @@ package.json
 
 → npm run dev
 
+## 建立client目录，用于客户端的js
+创建分别针对客户端和服务端的webpack配置文件
+使client/index.js能打包到 public/client.js
+然后通过server/index.js能够使用
+
 ### 其他步骤
 http://www.zhufengpeixun.cn/architecture/html/56.react-ssr.html
 
