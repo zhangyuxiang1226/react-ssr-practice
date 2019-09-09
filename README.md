@@ -46,6 +46,13 @@ package.json
 使client/index.js能打包到 public/client.js
 然后通过server/index.js能够使用
 
+## 路由
+引入react-router-dom
+创建routers.js
+client/index.js中配置BrowserRouter，引入 routers.js
+
+在server/index.js中添加引入StaticRouter，并配置属性，令其路由规则匹配
+
 ### 其他步骤
 http://www.zhufengpeixun.cn/architecture/html/56.react-ssr.html
 
