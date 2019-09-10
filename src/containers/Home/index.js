@@ -6,7 +6,6 @@ export default class Home extends Component {
         number: 0
     }
     render() {
-        console.log(this.props.staticContext)
         return (
             <div>
                 <div>home</div>
