@@ -53,6 +53,10 @@ client/index.js中配置BrowserRouter，引入 routers.js
 
 在server/index.js中添加引入StaticRouter，并配置属性，令其路由规则匹配
 
+## 引入redux
+本地数据 同步
+服务器端数据  异步 
+
 ### 其他步骤
 http://www.zhufengpeixun.cn/architecture/html/56.react-ssr.html
 

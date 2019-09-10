@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
-import { timingSafeEqual } from 'crypto'
-
-export default class Home extends Component {
-    state = {
-        number: 0
-    }
+import { connect } from 'react-redux';
+import actions from '../../store/actions/counter'
+class Home extends Component {
     render() {
         return (
             <div>
                 <div>home</div>
-                <div>{this.props.staticContext && this.props.staticContext.name}</div>
-                <p>{this.state.number}</p>
+                <p>{this.props.number}</p>
                 {/* 绑定事件必须要在客户端执行 */}
-                <button onClick={() => this.setState({
-                    number: this.state.number + 1
-                })}>+</button>
+                <button onClick={() => this.props.increment}>+</button>
             </div>
         )
     }
 }
+
+export default connect(state => state.counter, actions)(Home);
