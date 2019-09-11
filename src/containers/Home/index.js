@@ -1,17 +1,29 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import actions from '../../store/actions/counter'
+import actions from '../../store/actions/home'
 class Home extends Component {
+    componentWillMount() {
+        this.props.getHomeList();
+    }
     render() {
         return (
             <div>
                 <div>home</div>
-                <p>{this.props.number}</p>
-                {/* 绑定事件必须要在客户端执行 */}
-                <button onClick={() => this.props.increment}>+</button>
+                <div className="row">
+                    <div className="col-md-6 col-md-offset-3">
+                        <ul className="list-group">
+                            {
+                                this.props.list.map(item =>
+                                    (
+                                        <li key={item.id} className="list-group-item">{item.name}</li>
+                                    ))
+                            }
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }
 }
 
-export default connect(state => state.counter, actions)(Home);
+export default connect(state => state.home, actions)(Home);

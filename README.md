@@ -57,6 +57,16 @@ client/index.js中配置BrowserRouter，引入 routers.js
 本地数据 同步
 服务器端数据  异步 
 
+## 实现异步数据渲染，创建API服务器
+初步，使用浏览器直接访问api接口服务器
+1. api/server.js
+2. 客户端获取数据
+3. 安装axios
+4. 配置CORS跨域
+5. 写reducers/home.js，使用redux thunk处理异步
+
+进阶：浏览器访问node服务器，node服务器再去访问api服务器
+
 ### 其他步骤
 http://www.zhufengpeixun.cn/architecture/html/56.react-ssr.html
 
